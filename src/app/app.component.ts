@@ -56,6 +56,11 @@ export class AppComponent implements OnInit {
       title: 'Data binding',
       url: '/data-binding',
       icon: 'settings'
+    },
+    {
+      title: 'Rechner',
+      url: '/rechner',
+      icon: 'calculator'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

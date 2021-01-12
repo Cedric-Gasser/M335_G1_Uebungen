@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'navigation',
+    redirectTo: 'rechner',
     pathMatch: 'full'
   },
   {
@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'data-binding',
     loadChildren: () => import('./data-binding/data-binding.module').then( m => m.DataBindingPageModule)
+  },
+  {
+    path: 'rechner',
+    loadChildren: () => import('./rechner/rechner.module').then( m => m.RechnerPageModule)
   }
 ];
 
