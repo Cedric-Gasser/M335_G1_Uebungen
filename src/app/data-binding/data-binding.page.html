@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Data Binding</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+  <ion-input [(ngModel)]="Name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nachname</ion-label>
+  <ion-input [(ngModel)]="Vorname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Alter</ion-label>
+  <ion-input [(ngModel)]="Alter" type="Number"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="Vorname != undefined && Name != undefined">
+    <p>Mein Name ist {{Vorname}} {{Name}} <ion-text *ngIf="Alter > 0">und ich bin {{Alter}} Jahre alt.</ion-text></p>
+  </ion-item>
+</ion-content>
